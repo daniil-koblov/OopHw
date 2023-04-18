@@ -11,7 +11,7 @@ public class Chocolate extends Product {
 
     @Override
     public String toString() {
-        return super.toString()+ ", " + type;
+        return super.toString() + this.type;
     }
     
 }

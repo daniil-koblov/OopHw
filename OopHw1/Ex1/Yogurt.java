@@ -11,6 +11,6 @@ public class Yogurt extends Product {
 
     @Override
     public String toString() {
-        return super.toString()+ ", " + flavor;
+        return super.toString() + this.flavor;
     }
 }

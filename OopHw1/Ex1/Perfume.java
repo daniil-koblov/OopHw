@@ -10,6 +10,6 @@ public class Perfume extends Product{
 
     @Override
     public String toString() {
-        return String.format("%s, %s",super.toString(), brand);
+        return super.toString() + this.brand;
     }
 }
