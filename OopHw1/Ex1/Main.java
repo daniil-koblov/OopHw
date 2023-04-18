@@ -7,7 +7,8 @@ public class Main {
                 .addProduct(new Product("water", 10))
                 .addProduct(new Product("wine", 330))
                 .addProduct(new Yogurt("Danone", 300, "sweet"))
-                .addProduct(new Perfume("Si", 6500, "Dior"));
+                .addProduct(new Perfume("Si", 6500, "Dior"))
+                .addProduct(new Chocolate("AlpenGold", 400, "White"));
 
         for (int i = 0; i < vendingMachine.getList().size(); i++) {
             System.out.println(vendingMachine.getList().get(i));
