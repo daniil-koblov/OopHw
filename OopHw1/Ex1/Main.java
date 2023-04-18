@@ -13,24 +13,28 @@ public class Main {
         for (int i = 0; i < vendingMachine.getList().size(); i++) {
             System.out.println(vendingMachine.getList().get(i));
         }
+        System.out.println("\n");
         Product found = vendingMachine.findProduct("water");
         System.out.println(found);
         System.out.println("Покупаем товар");
         Product sold = vendingMachine.sellProduct(found);
         System.out.println(sold);
+        System.out.println("\n");
         System.out.println("В автомате столько денег:");
         System.out.println(vendingMachine.getAmount());
         System.out.println("---------------------");
         for (int i = 0; i < vendingMachine.getList().size(); i++) {
             System.out.println(vendingMachine.getList().get(i));
         }
+        System.out.println("\n");
         System.out.println("Покупаем товар");
         Product perfume = vendingMachine.sellProduct(vendingMachine.findProduct("Si"));
         System.out.println(perfume);
-        System.out.println("Осталось товаров: ");
+        System.out.println("\n Осталось товаров: ");
         for (int i = 0; i < vendingMachine.getList().size(); i++) {
             System.out.println(vendingMachine.getList().get(i));
         }
+        System.out.println("\n");
         System.out.println("Денег в автомате: ");
         System.out.println(vendingMachine.getAmount());
         try {
