@@ -12,6 +12,11 @@ public class Bat extends Predator implements Flyable{
     }
 
     @Override
+    public String toString() {
+        return String.format("Bat, %s", super.toString());
+    }
+
+    @Override
     public int speedForFly() {
         return 120;
     }
