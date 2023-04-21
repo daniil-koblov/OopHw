@@ -11,6 +11,11 @@ public class Shark extends Predator implements Swimable {
     }
 
     @Override
+    public String toString() {
+        return String.format("Shark, %s", super.toString());
+    }
+
+    @Override
     public int speedForSwim() {
         return 60;
     }
