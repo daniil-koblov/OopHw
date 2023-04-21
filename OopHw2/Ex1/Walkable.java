@@ -1,5 +1,6 @@
 package OopHw2.Ex1;
 
-public class Walkable {
-    
+public interface Walkable {
+    int speedForWalk();
+
 }
