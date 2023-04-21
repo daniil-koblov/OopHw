@@ -25,9 +25,15 @@ public class Main {
         for (var item: zoo.flyables()) {
             System.out.printf("%s - %d\n", item.toString(), item.speedForFly());
         }
+        System.out.println("-----------------");
+        for (var item: zoo.swimables()) {
+            System.out.printf("%s - %d\n", item.toString(), item.speedForSwim());
+        }
         System.out.println("----------------");
         System.out.println("Winner " + zoo.winnerWalk());
         System.out.println("-----------------");
         System.out.println("Winner " + zoo.winnerFly());
+        System.out.println("-----------------");
+        System.out.println("Winner " + zoo.winnerSwim());
     }
 }
