@@ -9,7 +9,8 @@ public class Main {
                 .addList(new Hare("Hare"))
                 .addList(new Duck("DonaldDuck"))
                 .addList(new Bat("Batman"))
-                .addList(new Shark("Lenny"));
+                .addList(new Shark("Lenny"))
+                .addList(new Fish("Oscar"));
         for (var item: zoo.getListAnimal()) {
             System.out.println(item);
         }
