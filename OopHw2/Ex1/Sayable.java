@@ -1,5 +1,5 @@
 package OopHw2.Ex1;
 
-public class Sayable {
-    
+public interface Sayable {
+    String say();
 }
