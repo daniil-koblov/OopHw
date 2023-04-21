@@ -13,7 +13,7 @@ public class Duck extends Herbivores implements Walkable, Flyable{
 
     @Override
     public String toString() {
-        return String.format("Bat, %s", super.toString());
+        return String.format("Duck, %s", super.toString());
     }
 
     @Override
