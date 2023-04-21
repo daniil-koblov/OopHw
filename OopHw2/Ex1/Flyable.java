@@ -1,5 +1,5 @@
 package OopHw2.Ex1;
 
-public class Flyable {
-    
+public interface Flyable {
+    int speedForFly();
 }
