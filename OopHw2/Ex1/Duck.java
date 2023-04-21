@@ -1,6 +1,6 @@
 package OopHw2.Ex1;
 
-public class Duck extends Herbivores implements Walkable, Flyable{
+public class Duck extends Herbivores implements Walkable, Flyable, Swimable{
     public Duck(String name) {
         super(name);
     }
@@ -24,5 +24,10 @@ public class Duck extends Herbivores implements Walkable, Flyable{
     @Override
     public int speedForWalk() {
         return 5;
+    }
+
+    @Override
+    public int speedForSwim(){
+        return 30;
     }
 }
