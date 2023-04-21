@@ -12,6 +12,11 @@ public class Duck extends Herbivores implements Walkable, Flyable{
     }
 
     @Override
+    public String toString() {
+        return String.format("Bat, %s", super.toString());
+    }
+
+    @Override
     public int speedForFly() {
         return 80;
     }
