@@ -6,8 +6,12 @@ public class Knife implements Weapon {
         return 15;
     }
 
+    public int range(){
+        return 0;
+    }
+
     @Override
     public String toString() {
-        return String.format("Knife, max damage %d", damage());
+        return String.format("Knife, max damage %d, max range %d", damage(), range());
     }
 }

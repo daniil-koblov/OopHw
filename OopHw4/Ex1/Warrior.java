@@ -2,26 +2,26 @@ package OopHw4.Ex1;
 
 import java.util.Random;
 
-public abstract class Warrior<T extends Weapon, S extends Shield> {
+public abstract class Warrior{
     private String name;
 
-    protected T weapon;
+    private Weapon weapon;
 
-    public T getWeapon() {
+    public Weapon getWeapon() {
         return weapon;
     }
 
-    public void setWeapon(T weapon) {
+    public void setWeapon(Weapon weapon) {
         this.weapon = weapon;
     }
 
-    protected S shield;
+    private Shield shield;
 
-    public S getShield() {
+    public Shield getShield() {
         return shield;
     }
 
-    public void setShield(S shield) {
+    public void setShield(Shield shield) {
         this.shield = shield;
     }
 
@@ -35,7 +35,7 @@ public abstract class Warrior<T extends Weapon, S extends Shield> {
         this.healthPoint = healthPoint;
     }
 
-    public Warrior(String name, T weapon, T Shield, int healthPoint) {
+    public Warrior(String name,  Weapon weapon, Shield shield, int healthPoint) {
         this.name = name;
         this.weapon = weapon;
         this.shield = shield;
@@ -44,7 +44,12 @@ public abstract class Warrior<T extends Weapon, S extends Shield> {
 
     @Override
     public String toString() {
-        return String.format("Name %s, weapon %s, shield %s, healthPoint %d", name, weapon, shield, healthPoint);
+        if(getShield() != null){
+            return String.format("Name %s, weapon %s, shield %s, healthPoint %d", name, weapon, shield, healthPoint);
+        }
+        else{
+            return String.format("Name %s, weapon %s, healthPoint %d", name, weapon, healthPoint);
+        }
     }
 
     public int hit() {

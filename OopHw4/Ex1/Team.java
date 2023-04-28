@@ -3,9 +3,9 @@ package OopHw4.Ex1;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Team <T extends Warrior, S extends Shield>{
+public class Team <T extends Warrior>{
     List<T> team = new ArrayList<>();
-    public Team<T, S> add(T warriorT){
+    public Team<T> add(T warriorT){
         team.add(warriorT);
         return this;
     }
@@ -17,13 +17,14 @@ public class Team <T extends Warrior, S extends Shield>{
             warriors.append(itemT);
             warriors.append("\n");
         }
-        warriors.append(String.format("heathPoint %s, damage %s, max range %s", healthPoints(), getDamage(), maxRange()));
+        warriors.append(String.format("healthPoint %s, damage %s, max range %s, min Shield Protect %s", healthPoints(), getDamage(), maxRange(), 
+                                        minShieldProtect()));
         return warriors.toString();
     }
 
     public int healthPoints(){
         int sum = 0;
-        for(T itemT: team){
+        for(T itemT : team){
             sum += itemT.getHealthPoint();
         }
         return sum;
@@ -39,12 +40,36 @@ public class Team <T extends Warrior, S extends Shield>{
     public int maxRange(){
         int max = 0;
         for(T itemT: team){
-            if(itemT instanceof Archer){
-                if(max < ((Archer)itemT).range()){
-                    max = ((Archer)itemT).range();
+            if(itemT instanceof Warrior){
+                if(max < (itemT.getWeapon().range())){
+                    max = (itemT.getWeapon().range());
                 }
             }
         }
         return max;
+    }
+    
+    public int maxShieldProtect(){
+        int max = 0;
+        for(T itemT: team){
+            if(itemT instanceof Warrior){
+                if(max < (itemT.getShield().shieldProtection())){
+                    max = (itemT.getShield().shieldProtection());
+                }
+            }
+        }
+        return max;
+    }
+
+    public int minShieldProtect(){
+        int min = maxShieldProtect();
+        for(T itemT: team){
+            if(itemT instanceof Warrior){
+                if(min > (itemT.getShield().shieldProtection())){
+                    min = (itemT.getShield().shieldProtection());
+                }
+            }
+        }
+        return min;
     }
 }
