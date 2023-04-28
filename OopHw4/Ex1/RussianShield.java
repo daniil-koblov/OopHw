@@ -8,6 +8,6 @@ public class RussianShield implements Shield {
 
     @Override
     public String toString() {
-        return String.format("Russian shield, max damage %d", shieldProtection());
+        return String.format("Russian shield, max protection %d", shieldProtection());
     }
 }
