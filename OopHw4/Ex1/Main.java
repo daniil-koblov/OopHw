@@ -12,7 +12,8 @@ public class Main {
 
         Team<Warrior> aTeam = new Team<>();
         aTeam.add(new Assassin("Mario",new Knife(), new EnglishShield(), 40))
-             .add(new Archer("Leonard", new Bow(), new SpanishShield(), 36));
+             .add(new Archer("Leonard", new Bow(), new SpanishShield(), 36))
+             .add(new Samurai("Miyamoto", new Katana(), new RussianShield(), 45));
 
         System.out.println("Archers Team\n");
         System.out.println(archersTeam + "\n");
