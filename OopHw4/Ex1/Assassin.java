@@ -1,9 +1,9 @@
 package OopHw4.Ex1;
 
-public class Assassin extends Warrior<Knife>{
+public class Assassin extends Warrior<Knife, EnglishShield>{
 
-    public Assassin(String name, Knife knife, int healthPoint) {
-        super(name, knife, healthPoint);
+    public Assassin(String name, Knife knife, EnglishShield englishShield, int healthPoint) {
+        super(name, knife, englishShield, healthPoint);
     }
     
     @Override
