@@ -1,5 +1,5 @@
 package OopHw4.Ex1;
 
-public class Shield {
-    
+public interface Shield {
+    public int shieldProtection();
 }
