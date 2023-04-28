@@ -3,9 +3,9 @@ package OopHw4.Ex1;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Team <T extends Warrior>{
+public class Team <T extends Warrior, S extends Shield>{
     List<T> team = new ArrayList<>();
-    public Team<T> add(T warriorT){
+    public Team<T, S> add(T warriorT){
         team.add(warriorT);
         return this;
     }
