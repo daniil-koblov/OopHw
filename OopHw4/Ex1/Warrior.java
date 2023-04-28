@@ -42,20 +42,9 @@ public abstract class Warrior{
         this.healthPoint = healthPoint;
     }
 
-    public Warrior(String name,  Weapon weapon, int healthPoint) {
-        this.name = name;
-        this.weapon = weapon;
-        this.healthPoint = healthPoint;
-    }
-
     @Override
     public String toString() {
-        if(getShield() != null){
-            return String.format("Name %s, weapon %s, shield %s, healthPoint %d", name, weapon, shield, healthPoint);
-        }
-        else{
-            return String.format("Name %s, weapon %s, healthPoint %d", name, weapon, healthPoint);
-        }
+        return String.format("Name %s, weapon %s, shield %s, healthPoint %d", name, weapon, shield, healthPoint);
     }
 
     public int hit() {
