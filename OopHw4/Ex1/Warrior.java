@@ -34,11 +34,17 @@ public abstract class Warrior{
     public void setHealthPoint(int healthPoint) {
         this.healthPoint = healthPoint;
     }
-
+    
     public Warrior(String name,  Weapon weapon, Shield shield, int healthPoint) {
         this.name = name;
         this.weapon = weapon;
         this.shield = shield;
+        this.healthPoint = healthPoint;
+    }
+
+    public Warrior(String name,  Weapon weapon, int healthPoint) {
+        this.name = name;
+        this.weapon = weapon;
         this.healthPoint = healthPoint;
     }
 
