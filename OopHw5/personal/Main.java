@@ -10,7 +10,7 @@ import OopHw5.personal.views.ViewUser;
 public class Main {
     public static void main(String[] args) {
         String pathProject = System.getProperty("user.dir");
-        String pathFile = pathProject.concat("/oop_java/homeworks/HW05/src/personal/users.md");
+        String pathFile = pathProject.concat("/OopHw5/personal/users.md");
         System.out.println(pathFile);
 //        FileOperation fileOperation = new FileOperationImpl("users.txt");
         FileOperation fileOperation = new FileOperationImplMd(pathFile);
