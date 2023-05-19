@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RepositoryFile implements Repository {
-    private UserMapper mapper = new UserMapper();
+    private NewUserMapper mapper = new NewUserMapper();
     private FileOperation fileOperation;
 
     public RepositoryFile(FileOperation fileOperation) {
